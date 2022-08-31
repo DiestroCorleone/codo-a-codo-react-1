@@ -21,6 +21,14 @@ body {
   font-weight: bold;
   max-width: 100%;
   overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 2rem;
 }
 
 header,
@@ -29,12 +37,13 @@ article,
 section,
 aside,
 footer {
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 header {
   background-color: var(--blue);
   margin: 1rem 1rem 0.5rem 1rem;
+    min-height: 15vh;
 }
 
 nav:not(.page-body nav) {
@@ -51,6 +60,7 @@ span {
 .page-body {
   margin: 1rem 1rem 0.5rem 1rem;
   display: flex;
+    justify-content: space-between;
 }
 
 .page-body nav {
@@ -64,6 +74,12 @@ main div {
   background-color: var(--green);
 }
 
+.page-body nav div, .aside-r div {
+    margin-top: 1rem;
+    padding: 1rem;
+    min-height: 20vh;
+}
+
 main {
   background-color: var(--green);
   width: 52%;
@@ -75,6 +91,7 @@ main {
 section {
   background-color: var(--litegrey);
   margin: 1rem 0.5rem 1rem 0.5rem;
+    min-height: 40vh;
 }
 
 section h1:not(article h1, aside h1) {
@@ -90,8 +107,30 @@ aside {
   background-color: var(--grey);
 }
 
+section article, section aside {
+    min-height: 20vh;
+    margin: 1rem;
+}
+
 .aside-r {
   width: 20%;
+}
+
+.page-body nav, .aside-r, section div {
+    text-align: center;
+}
+
+span {
+    min-height: 20vh;
+}
+
+header, span div {
+    display: grid;
+    align-items: center;
+}
+
+span div {    
+    margin-top: 1rem;
 }
 
 span div:first-of-type {
@@ -105,7 +144,7 @@ span div:last-child {
 
 footer {
   background-color: var(--blue);
-  margin: 1rem 1rem 1rem 1rem;
+  margin: 1rem 1rem 2rem 1rem;
 }
 
 @media screen and (max-width: 800px) {
