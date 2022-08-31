@@ -19,6 +19,8 @@ body {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: white;
   font-weight: bold;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 header,
@@ -48,6 +50,7 @@ span {
 
 .page-body {
   margin: 1rem 1rem 0.5rem 1rem;
+  display: flex;
 }
 
 .page-body nav {
@@ -63,9 +66,9 @@ main div {
 
 main {
   background-color: var(--green);
-  width: 40%;
+  width: 52%;
   margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
   padding: 1rem;
 }
 
@@ -87,6 +90,10 @@ aside {
   background-color: var(--grey);
 }
 
+.aside-r {
+  width: 20%;
+}
+
 span div:first-of-type {
   width: 60%;
   margin-right: 0.5rem;
@@ -99,4 +106,18 @@ span div:last-child {
 footer {
   background-color: var(--blue);
   margin: 1rem 1rem 1rem 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  .page-body {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  main,
+  .page-body nav,
+  .aside-r {
+    width: 90%;
+    margin: 0 auto !important;
+  }
 }
